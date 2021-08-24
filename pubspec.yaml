@@ -1,7 +1,7 @@
 name: desmos_rewards_verifier
-description: A new Flutter project.
+description: The official application to verify your wallet balance before the Desmos mainnet goes live
 
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: 'none'
 version: 1.0.0+1
 
 environment:
