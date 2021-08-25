@@ -25,7 +25,7 @@ jobs:
         run: flutter packages get
 
       - name: Build 👷
-        run: flutter build web --release
+        run: flutter build web --release --web-renderer html
 
       - name: Prepare tags 🏷️
         id: prep
