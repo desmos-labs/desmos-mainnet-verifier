@@ -10,6 +10,28 @@ class MyApp extends StatelessWidget {
       title: 'Desmos mainnet balance verifier',
       theme: ThemeData(
         fontFamily: 'RaleWay',
+        textTheme: Theme.of(context).textTheme.copyWith(
+              headline1: Theme.of(context).textTheme.headline1!.copyWith(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 65,
+                    color: Color(0xFFed6c53),
+                  ),
+              headline2: Theme.of(context).textTheme.headline2!.copyWith(
+                    fontWeight: FontWeight.normal,
+                    color: Color(0xFF3B3C24),
+                    fontSize: 20,
+                  ),
+              bodyText1: Theme.of(context).textTheme.bodyText1!.copyWith(
+                fontWeight: FontWeight.normal,
+                fontSize: 16,
+                color: Color(0xFF3B3C24),
+              ),
+          bodyText2: Theme.of(context).textTheme.bodyText2!.copyWith(
+            fontWeight: FontWeight.normal,
+            fontSize: 24,
+            color: Color(0xFF3B3C24),
+          )
+            ),
         primarySwatch: MaterialColor(
           0xFFed6c53,
           <int, Color>{

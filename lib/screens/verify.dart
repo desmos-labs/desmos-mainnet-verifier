@@ -48,23 +48,21 @@ class _VerifyWalletScreenState extends State<VerifyWalletScreen> {
         child: SizedBox(
           width: 500,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
                 'Welcome to the Desmos mainnet wallet verifier',
-                textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.headline1,
               ),
-              SizedBox(height: 25),
+              SizedBox(height: 16),
               Text(
                 'Here you will be able to verify the allocation made to '
                 'your wallet inside the genesis state of the upcoming '
                 'Desmos mainnet.',
-                textAlign: TextAlign.center,
+                style: Theme.of(context).textTheme.headline2,
               ),
-              SizedBox(height: 25),
+              SizedBox(height: 60),
               Text('Please insert here your address:'),
-              SizedBox(height: 25),
+              SizedBox(height: 4),
               TextField(
                 textAlign: TextAlign.center,
                 controller: _controller,
@@ -82,10 +80,13 @@ class _VerifyWalletScreenState extends State<VerifyWalletScreen> {
                   });
                 },
               ),
-              SizedBox(height: 50),
-              Text('Your balance at genesis will be: '),
-              SizedBox(height: 25),
-              Text(_amount, style: TextStyle(fontSize: 24)),
+              SizedBox(height: 24),
+              Text('Your balance at genesis will be'),
+              SizedBox(height: 10),
+              Text(
+                _amount,
+                style: Theme.of(context).textTheme.bodyText2,
+              ),
             ],
           ),
         ),
