@@ -63,22 +63,34 @@ class _VerifyWalletScreenState extends State<VerifyWalletScreen> {
               SizedBox(height: 60),
               Text('Please insert here your address:'),
               SizedBox(height: 4),
-              TextField(
-                textAlign: TextAlign.center,
-                controller: _controller,
-                decoration: InputDecoration(
-                  hintText: 'Address',
-                ),
-                onChanged: (String value) async {
-                  if (value.length != 45) {
-                    return;
-                  }
+              Row(
+                children: [
+                  SizedBox(
+                    width: 464,
+                    child: TextField(
+                      textAlign: TextAlign.center,
+                      controller: _controller,
+                      decoration: InputDecoration(
+                        hintText: 'Address',
+                      ),
+                      onChanged: (String value) async {
+                        if (value.length != 45) {
+                          return;
+                        }
 
-                  final amount = await widget.genesisApis.getBalance(value);
-                  setState(() {
-                    _amount = amount;
-                  });
-                },
+                        final amount =
+                            await widget.genesisApis.getBalance(value);
+                        setState(() {
+                          _amount = amount;
+                        });
+                      },
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text('Calculate'),
+                  )
+                ],
               ),
               SizedBox(height: 24),
               Text('Your balance at genesis will be'),
